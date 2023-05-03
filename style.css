@@ -1,0 +1,75 @@
+:root {
+    font-size: 10px;
+    font-family: 'Noto Serif JP', serif;
+
+    --primary: #146C94;
+    --secoundary: #19A7CE;
+    --tertiary: #B0DAFF;
+    --accent: #FEFF86;
+    --background: #feeed8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    scroll-snap-type: y mandatory;
+}
+
+.view {
+    overflow-x: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+}
+
+.container {
+    color: var(--accent);
+    background-color: var(--primary);
+    width: 100vw;
+    height: 100vh;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.container:nth-of-type(2) {
+    background-color: var(--background);
+}
+
+.container>.box div {
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.container>.box input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+
+.container>.box input[type="text"] {
+    text-align: center;
+    height: 30px;
+}
+
+.stu_num {
+    font-size: 8rem;
+    font-weight: bold;
+}
